@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install":  "concurrently \"cd host-app; npm install\" \"cd remote-app; npm install\"",
-    "start": "concurrently \"cd host-app; npm run dev\" \"cd remote-app; npm run start\"",
+    "install:apps": "concurrently \"cd host-app; npm install\" \"cd remote-app; npm install\"",
+    "start": "concurrently \"cd host-app; npm run dev\" \"cd remote-app; npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const { withFederatedSidecar, federationLoader } = require('@module-federation/nextjs-mf');
-const deps = require('./package.json').dependencies;
-let merge = require('webpack-merge');
-
 
 module.exports = {
   webpack: (config, options) => {

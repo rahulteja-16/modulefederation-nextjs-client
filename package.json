@@ -1,0 +1,24 @@
+{
+  "name": "modulefederation-nextjs-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install":  "concurrently \"cd host-app; npm install\" \"cd remote-app; npm install\"",
+    "start": "concurrently \"cd host-app; npm run dev\" \"cd remote-app; npm run start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulteja-dev/modulefederation-nextjs-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulteja-dev/modulefederation-nextjs-client/issues"
+  },
+  "homepage": "https://github.com/rahulteja-dev/modulefederation-nextjs-client#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

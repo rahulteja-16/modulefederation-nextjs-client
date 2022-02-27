@@ -1,0 +1,39 @@
+{
+    "name": "React Type Script Template",
+    "short_name": "React TS",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "description": "React Type Script Template",
+    "icons": [
+        {
+            "src": "maskable.png",
+            "type": "image/png",
+            "size": "196x196",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logo256.png",
+            "type": "image/png",
+            "sizes": "256x356"
+        },
+        {
+            "src": "logo384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

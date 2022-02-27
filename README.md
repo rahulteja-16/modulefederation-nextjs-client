@@ -7,12 +7,11 @@ Module federation in NextJS depends on [@module-federation/nextjs-mf](https://ww
 # Context
 There are 2 applications, 
 - `host-app`: NextJS App
-- `remote-app`: flovour of `React + Webpack 5`
+- `remote-app`: flavour of `React + Webpack 5`
 
 `remote-app` is exposing a component called `Button` and the same button is consumed by `host-app`.
 
 # Setup
-- Clone the Repository
 - run `npm install` - Install all the dependencies to run the apps in parallel.
 - run `npm run install:apps` - Install all the required dependecies on both `host-app` and `remote-app`
 - run `npm run start` - Start both `host-app` and `remote-app`

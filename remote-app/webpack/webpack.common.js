@@ -1,6 +1,9 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const ModuleFederationPlugin =
+	require('webpack').container.ModuleFederationPlugin
+const deps = require('../package.json').dependencies
 
 module.exports = {
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -40,8 +43,22 @@ module.exports = {
 		new HTMLWebpackPlugin({
 			template: path.resolve(__dirname, '..', './src/index.html'),
 		}),
-		new CopyPlugin({
-			patterns: [{ from: './public/*' }],
+		new ModuleFederationPlugin({
+			name: 'remote',
+			filename: 'remote.js',
+			exposes: {
+				'./Button': './src/Button.tsx',
+			},
+			shared: {
+				react: {
+					singleton: true,
+					requiredVersion: deps.react,
+				},
+				'react-dom': {
+					singleton: true,
+					requiredVersion: deps['react-dom'],
+				},
+			},
 		}),
 	],
 	stats: 'errors-only',
